@@ -146,15 +146,15 @@ header .pc_nav_list li {
 
 /* 採用情報 */
 .job-sec {
-    margin-top: 100px;
+    margin-top: 200px;
 }
 .job-post {
-    margin: 0 auto 100px;
+    margin: 0 auto 200px;
 }
 .job-sec .job-title {
     font-size: 40px;
     font-weight: bold;
-    margin-bottom: 28px;
+    margin-bottom: 40px;
     text-align: center;
 }
 .job-sec .job-content {
