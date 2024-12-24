@@ -39,15 +39,35 @@ document.addEventListener('scroll', function() {
 });
 
 
-jQuery(document).ready(function($) {
-    $('.slick01').slick({
-        slidesToShow: 1,        // 1つのスライドを表示
-        slidesToScroll: 1,      // 1つずつスクロール
-        autoplay: true,         // 自動再生
-        autoplaySpeed: 1000,    // 3秒ごとにスライド
-        dots: true,             // 下部のドット表示
-        arrows: true,           // 左右の矢印表示
-        infinite: true,         // 無限ループ
-        adaptiveHeight: true    // 高さを自動調整
-    });
+// jQuery(document).ready(function($) {
+//     $('.slick01').slick({
+//         slidesToShow: 1,        // 1つのスライドを表示
+//         slidesToScroll: 1,      // 1つずつスクロール
+//         autoplay: true,         // 自動再生
+//         autoplaySpeed: 1000,    // 3秒ごとにスライド
+//         dots: true,             // 下部のドット表示
+//         arrows: true,           // 左右の矢印表示
+//         infinite: true,         // 無限ループ
+//         adaptiveHeight: true    // 高さを自動調整
+//     });
+// });
+
+// modalWindow
+const openModal = document.getElementById("openModal");
+const closeModal = document.getElementById("closeModal");
+const modal = document.getElementById("modal");
+// モーダルを開く
+openModal.addEventListener("click", () => {
+    modal.style.display = "flex"; // モーダルを表示
 });
+// モーダルを閉じる
+closeModal.addEventListener("click", () => {
+    modal.style.display = "none"; // モーダルを非表示
+});
+// モーダルの外側をクリックしたら閉じる
+window.addEventListener("click", (event) => {
+    if (event.target === modal) {
+        modal.style.display = "none";
+    }
+});
+
