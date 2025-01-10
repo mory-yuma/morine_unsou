@@ -53,21 +53,25 @@ document.addEventListener('scroll', function() {
 // });
 
 // modalWindow
-const openModal = document.getElementById("openModal");
-const closeModal = document.getElementById("closeModal");
-const modal = document.getElementById("modal");
-// モーダルを開く
-openModal.addEventListener("click", () => {
-    modal.style.display = "flex"; // モーダルを表示
+// modalWindow
+const openButtons = document.querySelectorAll(".must-skill");
+const modals = document.querySelectorAll(".modal"); 
+openButtons.forEach((button, index) => {
+    button.addEventListener("click", () => {
+        modals[index].style.display = "flex"; // 該当するモーダルを表示
+    });
 });
-// モーダルを閉じる
-closeModal.addEventListener("click", () => {
-    modal.style.display = "none"; // モーダルを非表示
-});
-// モーダルの外側をクリックしたら閉じる
-window.addEventListener("click", (event) => {
-    if (event.target === modal) {
-        modal.style.display = "none";
-    }
+modals.forEach((modal) => {
+    const closeButton = modal.querySelector(".close-btn");
+    // モーダルを閉じる
+    closeButton.addEventListener("click", () => {
+        modal.style.display = "none"; // モーダルを非表示
+    });
+    // モーダルの外側をクリックしたら閉じる
+    window.addEventListener("click", (event) => {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    });
 });
 
