@@ -53,7 +53,6 @@ document.addEventListener('scroll', function() {
 // });
 
 // modalWindow
-// modalWindow
 const openButtons = document.querySelectorAll(".must-skill");
 const modals = document.querySelectorAll(".modal"); 
 openButtons.forEach((button, index) => {

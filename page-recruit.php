@@ -50,6 +50,7 @@
                 <h3 class="job-title">倉庫作業員</h3>
                 <div class="job-content">
                     <div class="job-description">
+                    <p style="text-align: center; font-weight: bold; font-size: 28px; margin-bottom: 30px;">作業内容</p>
                         <ul>
                             <li>・自社倉庫にてデバンニング作業（貨物をコンテナから取り出す作業）</li>
                             <li>・フォークリフトオペレーター</li>
