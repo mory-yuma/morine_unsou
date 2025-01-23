@@ -1,5 +1,5 @@
 <footer id="footer">
-    <div class="footer_wrapper">
+    <div class="inner_wrap footer_wrap">
         <div class="footer_logo">森根運送</div>
         <ul class="footer_nav_list">
             <li><a href="<?php echo esc_url(home_url('/')); ?>">ホーム</a></li>

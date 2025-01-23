@@ -1,11 +1,18 @@
 <?php get_header();?>
-    <main>
-        <section class="job-sec wrapper">
+    <main id="recruit_page">
+    <section class="fv fv-recruit">
+            <div class="fv_content">
+                <p class="fv_fade-in">一緒に</p>
+                <p class="fv_fade-in2">働かないかい？</p>
+            </div>
+        </section>
+        <section class="job-sec">
+            <div class="inner_wrap">
             <div class="job-post driver">
-                <h3 class="job-title">運転手</h3>
+                <h3 class="job-title under_fade-in">運転手</h3>
                 <div class="job-content">
-                    <img src="https://placehold.jp/400x300.png" alt="運転手の写真">
-                    <div class="job-description">
+                    <img class="under_fade-in"src="https://placehold.jp/400x300.png" alt="運転手の写真">
+                    <div class="job-description under_fade-in">
                         <p style="text-align: center; font-weight: bold; font-size: 28px; margin-bottom: 30px;">作業内容</p>
                         <ul>
                             <li>・港から各取引先へコンテナ横持ち</li>
@@ -47,9 +54,9 @@
             </div>
             
             <div class="job-post warehouse-worker">
-                <h3 class="job-title">倉庫作業員</h3>
+                <h3 class="job-title under_fade-in">倉庫作業員</h3>
                 <div class="job-content">
-                    <div class="job-description">
+                    <div class="job-description under_fade-in">
                     <p style="text-align: center; font-weight: bold; font-size: 28px; margin-bottom: 30px;">作業内容</p>
                         <ul>
                             <li>・自社倉庫にてデバンニング作業（貨物をコンテナから取り出す作業）</li>
@@ -57,7 +64,7 @@
                         </ul>
                         <button class="must-skill">必要なスキル/勤務地</button>
                     </div>
-                    <img src="https://placehold.jp/400x300.png" alt="倉庫の中の作業員の写真">
+                    <img class="under_fade-in" src="https://placehold.jp/400x300.png" alt="倉庫の中の作業員の写真">
                     <div class="modal" style="display:none;">
                         <div class="modal-content">
                             <span class="close-btn">&times;</span>
@@ -89,6 +96,8 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="contactButton under_fade-in"><a href="/page-contact.php">お問合せはこちら</a></div>
             </div>
         </section>
     </main>

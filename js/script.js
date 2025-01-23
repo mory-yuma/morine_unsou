@@ -1,6 +1,6 @@
 // fv
 document.addEventListener('DOMContentLoaded', function() {
-    const elements = document.querySelectorAll('.fv_morine_fade-in');
+    const elements = document.querySelectorAll('.fv_fade-in');
     setTimeout(() => {
         elements.forEach(element => {
             element.classList.add('action');
@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }, 400); 
 });
 document.addEventListener('DOMContentLoaded', function() {
-    const elements = document.querySelectorAll('.fv_transpoter_fade-in');
+    const elements = document.querySelectorAll('.fv_fade-in2');
     setTimeout(() => {
         elements.forEach(element => {
             element.classList.add('action');
@@ -37,21 +37,6 @@ document.addEventListener('scroll', function() {
         }
     });
 });
-
-
-// jQuery(document).ready(function($) {
-//     $('.slick01').slick({
-//         slidesToShow: 1,        // 1つのスライドを表示
-//         slidesToScroll: 1,      // 1つずつスクロール
-//         autoplay: true,         // 自動再生
-//         autoplaySpeed: 1000,    // 3秒ごとにスライド
-//         dots: true,             // 下部のドット表示
-//         arrows: true,           // 左右の矢印表示
-//         infinite: true,         // 無限ループ
-//         adaptiveHeight: true    // 高さを自動調整
-//     });
-// });
-
 // modalWindow
 const openButtons = document.querySelectorAll(".must-skill");
 const modals = document.querySelectorAll(".modal"); 

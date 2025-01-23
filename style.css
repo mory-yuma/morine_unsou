@@ -10,10 +10,11 @@ li {
 a {
     text-decoration: none;
 }
-.wrapper {
+.inner_wrap {
     max-width: 1200px;
     margin: 0 auto;
     box-sizing: border-box;
+    border: #000 4px solid;
 }
 header {
     position: fixed;
@@ -54,12 +55,10 @@ footer {
     background-color: #000;
     color: #fff;
     padding: 30px 0;
+    margin-top: 100px;
     letter-spacing: 0.2rem;
 }
-.footer_wrapper {
-    max-width: 1200px;
-    margin: 0 auto;
-    box-sizing: border-box;
+.footer_wrap {
     display: flex;
     justify-content: space-between;
 }
@@ -79,36 +78,6 @@ footer .footer_nav_list li a {
 }
 
 /* index.php */
-/* sec_ファーストビュー */
-.top_fv {
-    padding: 0 60px;
-    width: 100%;
-    height: 100vh;
-    background-image: url(https://placehold.jp/1440x1024.png);
-    background-size: cover; /* 背景画像を要素全体に収める */
-    background-repeat: no-repeat; /* 繰り返しを防ぐ */
-    background-position: center; /* 中央に配置 */
-}
-.fv_campany_name {
-    padding: 124px 124px 124px 0px;
-}
-.fv_campany_name p {
-    font-size: 50px;
-    font-weight: bold;
-    color: #fff;
-}
-.fv_job_request_button {
-    padding: 12px 48px;
-    background-color: #000;
-    color: #fff;
-    border-radius: 10px;
-    font-size: 18px;
-    font-weight: bold;
-    position: fixed;
-    z-index: 10;
-    right: 50px;
-    bottom: 50px;
-}
 /* sec_森根運送について */
 .top_section {
     padding: 80px 60px;
@@ -153,12 +122,12 @@ footer .footer_nav_list li a {
 
 
 
-.fv_morine_fade-in, .fv_transpoter_fade-in {
+.fv_fade-in, .fv_fade-in2 {
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.1s linear, transform 0.4s linear;
 }
-.fv_morine_fade-in.action, .fv_transpoter_fade-in.action {
+.fv_fade-in.action, .fv_fade-in2.action {
     opacity: 1;
     transform: translateY(0);
 }
@@ -172,7 +141,56 @@ footer .footer_nav_list li a {
     opacity: 1;
     transform: translateY(0);
 }
+/* 会社概要 */
+#overview_page {
+    padding: 20px;
+}
+#overview_page table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+#overview_page td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    vertical-align: top;
+    font-size: 16px;
+}
+#overview_page li {
+    font-size: 16px;
+    margin-bottom: 6px;
+}
+/* 左側の列（項目名）のスタイル */
+#overview_page td:first-child {
+    font-weight: bold;
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: center;
+    vertical-align: middle;
+    width: 25%;
+}
+/* 右側の列（内容）のスタイル */
+    #overview_page td:last-child {
+    text-align: left; /* 左揃え */
+}
 
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+main#overview_page table {
+    font-size: 14px; /* フォントサイズを小さくする */
+}
+main#overview_page td {
+    display: block; /* ブロック要素にする */
+    width: 100%; /* 全幅にする */
+    box-sizing: border-box;
+}
+main#overview_page td:first-child {
+    font-weight: normal; /* 太字を解除 */
+    background-color: transparent; /* 背景色を透明に */
+}
+}
+  
 /* 採用情報ページ */
 .job-sec {
     margin-top: 200px;
@@ -212,7 +230,6 @@ footer .footer_nav_list li a {
     bottom: 4px;
     text-align: center;
 }
-
 .modal {
     position: fixed;
     top: 0;
@@ -267,4 +284,61 @@ footer .footer_nav_list li a {
         transform: scale(1);
         opacity: 1;
     }
+}
+.contactButton {
+    background-color: #000;
+    color:#fff;
+    padding: 20px;
+    margin: 0 auto;
+    text-align: center;
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+/* sec_ファーストビュー */
+.top_fv {
+
+    width: 100%;
+    height: 100vh;
+    background-image: url(https://placehold.jp/1440x1024.png);
+    background-size: cover; /* 背景画像を要素全体に収める */
+    background-repeat: no-repeat; /* 繰り返しを防ぐ */
+    background-position: center; /* 中央に配置 */
+}
+.fv_content {
+    padding: 124px 124px 124px 0px;
+}
+.fv_content p {
+    font-size: 50px;
+    font-weight: bold;
+    color: #fff;
+}
+.fv_job_request_button {
+    padding: 12px 48px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    position: fixed;
+    z-index: 10;
+    right: 50px;
+    bottom: 50px;
+}
+.fv {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 0 60px; 
+    color: #fff;
+    overflow: hidden;
+    background-size: cover; /* 背景画像を全体に表示 */
+    background-position: center; /* 中央に配置 */
+    background-attachment: fixed; /* 背景を固定 (パララックス効果) */
+}
+.fv-home {
+    background-image: url(https://placehold.jp/1440x1024.png);
+}
+.fv-recruit {
+    background-image: url(https://placehold.jp/1440x1024.png);
 }
