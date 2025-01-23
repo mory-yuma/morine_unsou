@@ -1,6 +1,6 @@
 // fv
 document.addEventListener('DOMContentLoaded', function() {
-    const elements = document.querySelectorAll('.fv_morine_fade-in');
+    const elements = document.querySelectorAll('.fv_fade-in');
     setTimeout(() => {
         elements.forEach(element => {
             element.classList.add('action');
@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }, 400); 
 });
 document.addEventListener('DOMContentLoaded', function() {
-    const elements = document.querySelectorAll('.fv_transpoter_fade-in');
+    const elements = document.querySelectorAll('.fv_fade-in2');
     setTimeout(() => {
         elements.forEach(element => {
             element.classList.add('action');
@@ -23,7 +23,22 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }, 800); 
 });
-// もりねうんそうについて
+// ホームのお仕事依頼ボタン
+window.addEventListener('scroll', () => {
+    const fixedElement = document.querySelector('.fv_job_request_button');
+    // 現在のスクロール位置 + 表示されているウィンドウの高さ
+    const scrollPosition = window.scrollY + window.innerHeight;
+    // ページ全体の高さ
+    const pageHeight = document.documentElement.scrollHeight;
+    if (scrollPosition >= pageHeight) {
+        // 一番下に到達した場合
+        fixedElement.style.transform = 'translateY(-100px)'; // 上に移動
+    } else {
+        // それ以外の場合
+        fixedElement.style.transform = 'translateY(0)'; // 元の位置
+    }
+});
+// 下からふわっと
 document.addEventListener('scroll', function() {
     // 一度にすべてのターゲット要素を取得
     const elements = document.querySelectorAll('.under_fade-in');
@@ -37,22 +52,6 @@ document.addEventListener('scroll', function() {
         }
     });
 });
-
-
-// jQuery(document).ready(function($) {
-//     $('.slick01').slick({
-//         slidesToShow: 1,        // 1つのスライドを表示
-//         slidesToScroll: 1,      // 1つずつスクロール
-//         autoplay: true,         // 自動再生
-//         autoplaySpeed: 1000,    // 3秒ごとにスライド
-//         dots: true,             // 下部のドット表示
-//         arrows: true,           // 左右の矢印表示
-//         infinite: true,         // 無限ループ
-//         adaptiveHeight: true    // 高さを自動調整
-//     });
-// });
-
-// modalWindow
 // modalWindow
 const openButtons = document.querySelectorAll(".must-skill");
 const modals = document.querySelectorAll(".modal"); 
