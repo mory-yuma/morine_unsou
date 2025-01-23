@@ -23,7 +23,22 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }, 800); 
 });
-// もりねうんそうについて
+// ホームのお仕事依頼ボタン
+window.addEventListener('scroll', () => {
+    const fixedElement = document.querySelector('.fv_job_request_button');
+    // 現在のスクロール位置 + 表示されているウィンドウの高さ
+    const scrollPosition = window.scrollY + window.innerHeight;
+    // ページ全体の高さ
+    const pageHeight = document.documentElement.scrollHeight;
+    if (scrollPosition >= pageHeight) {
+        // 一番下に到達した場合
+        fixedElement.style.transform = 'translateY(-100px)'; // 上に移動
+    } else {
+        // それ以外の場合
+        fixedElement.style.transform = 'translateY(0)'; // 元の位置
+    }
+});
+// 下からふわっと
 document.addEventListener('scroll', function() {
     // 一度にすべてのターゲット要素を取得
     const elements = document.querySelectorAll('.under_fade-in');
